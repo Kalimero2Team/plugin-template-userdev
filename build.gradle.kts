@@ -3,12 +3,12 @@ import net.minecrell.pluginyml.bukkit.BukkitPluginDescription
 plugins {
   `java-library`
   id("xyz.jpenilla.run-paper") version "1.0.6"
-  id("net.minecrell.plugin-yml.bukkit") version "0.5.1"
-  id("com.github.johnrengelman.shadow") version "7.1.0"
+  id("net.minecrell.plugin-yml.bukkit") version "0.5.2"
+  id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
 group = "com.kalimero2.team"
-version = "1.0.0-SNAPSHOT"
+version = "1.0.0"
 description = "Plugin Template"
 
 repositories {
@@ -17,8 +17,8 @@ repositories {
 }
 
 dependencies {
-  compileOnly("io.papermc.paper","paper-api","1.18.2-R0.1-SNAPSHOT")
-  implementation("cloud.commandframework", "cloud-paper", "1.6.1")
+  compileOnly("io.papermc.paper","paper-api","1.19.2-R0.1-SNAPSHOT")
+  implementation("cloud.commandframework", "cloud-paper", "1.7.1")
 }
 
 java {
@@ -27,7 +27,7 @@ java {
 
 bukkit {
   main = "com.kalimero2.team.template.TemplatePlugin"
-  apiVersion = "1.18"
+  apiVersion = "1.19"
   load = BukkitPluginDescription.PluginLoadOrder.STARTUP
   authors = listOf("Author")
 }
@@ -41,7 +41,7 @@ tasks {
   }
 
   runServer{
-    minecraftVersion.set("1.18.2")
+    minecraftVersion.set("1.19.2")
   }
 
 }
