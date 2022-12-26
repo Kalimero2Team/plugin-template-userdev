@@ -18,7 +18,7 @@ repositories {
 
 dependencies {
   compileOnly("io.papermc.paper","paper-api","1.19.2-R0.1-SNAPSHOT")
-  implementation("cloud.commandframework", "cloud-paper", "1.7.1")
+  implementation("cloud.commandframework", "cloud-paper", "1.8.0")
 }
 
 java {
