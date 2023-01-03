@@ -43,14 +43,14 @@ publishing {
     repositories {
         maven {
             name = "byquantonRepo"
-            if(version.toString().endsWith("-SNAPSHOT")) {
-                url = uri("https://repo.byquanton.eu/snapshots")
+            url = if(version.toString().endsWith("-SNAPSHOT")) {
+                uri("https://repo.byquanton.eu/snapshots")
             } else {
-                url = uri("https://repo.byquanton.eu/releases")
+                uri("https://repo.byquanton.eu/releases")
             }
-            credentials(PasswordCredentials::class)
-            authentication {
-                create<BasicAuthentication>("basic")
+            credentials {
+                username = System.getenv("REPO_USERNAME")
+                password = System.getenv("REPO_PASSWORD")
             }
         }
     }
@@ -60,4 +60,3 @@ publishing {
         }
     }
 }
-
