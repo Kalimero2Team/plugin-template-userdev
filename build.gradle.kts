@@ -48,6 +48,7 @@ publishing {
             } else {
                 uri("https://repo.byquanton.eu/releases")
             }
+            println("Publishing as "+System.getenv("REPO_USERNAME"))
             credentials {
                 username = System.getenv("REPO_USERNAME")
                 password = System.getenv("REPO_PASSWORD")
