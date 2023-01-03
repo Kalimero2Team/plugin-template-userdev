@@ -5,6 +5,7 @@ plugins {
     `maven-publish`
     signing
     id("xyz.jpenilla.run-paper") version "2.0.1"
+    id("io.papermc.paperweight.userdev") version "1.4.0"
     id("net.minecrell.plugin-yml.bukkit") version "0.5.2"
 }
 
@@ -18,7 +19,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("io.papermc.paper", "paper-api", "1.19.3-R0.1-SNAPSHOT")
+    paperDevBundle("1.19.3-R0.1-SNAPSHOT")
     bukkitLibrary("cloud.commandframework", "cloud-paper", "1.8.0")
 }
 
@@ -34,6 +35,9 @@ bukkit {
 }
 
 tasks {
+    assemble {
+        dependsOn(reobfJar)
+    }
     runServer {
         minecraftVersion("1.19.3")
     }
