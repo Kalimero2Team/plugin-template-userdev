@@ -6,7 +6,7 @@ plugins {
     signing
     id("xyz.jpenilla.run-paper") version "2.0.1"
     id("io.papermc.paperweight.userdev") version "1.5.1"
-    id("net.minecrell.plugin-yml.bukkit") version "0.5.3"
+    id("net.minecrell.plugin-yml.bukkit") version "0.6.0"
 }
 
 group = "com.kalimero2.team"
