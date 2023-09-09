@@ -20,7 +20,7 @@ repositories {
 
 dependencies {
     paperDevBundle("1.19.3-R0.1-SNAPSHOT")
-    bukkitLibrary("cloud.commandframework", "cloud-paper", "1.8.1")
+    bukkitLibrary("cloud.commandframework", "cloud-paper", "1.8.4")
 }
 
 java {
